@@ -1,6 +1,38 @@
 # PowerShell-Formatter
 Script to format your PowerShell scripts using PSScriptAnalyzer. Used as a Git pre-commit hook and in CI pipelines.
 
+## Usage
+
+### Format Code
+
+```powershell
+./FormatCode.ps1
+```
+
+### Format Code (Check Only - Don't Modify Files)
+
+```powershell
+./FormatCode.ps1 -CheckOnly
+```
+
+### Format Code (Check Only - Show Only Files That Need Reformatting)
+
+```powershell
+./FormatCode.ps1 -CheckOnly -ShowOnlyReformat
+```
+
+### Format Code with Custom Settings and Rules
+
+See [PSScriptAnalyzer rules reference](https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/readme?view=ps-modules).
+
+Create a file called `PSScriptAnalyzerSettings.psd1` next to FormatCode.ps1.
+
+Or, specify a custom settings file name using the `-SettingsFile` parameter.
+
+```powershell
+./FormatCode.ps1 -SettingsFile settings.psd1
+```
+
 ## Screenshots
 
 ### All Files OK (`FormatCode.ps1`)
