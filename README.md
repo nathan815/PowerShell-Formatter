@@ -21,7 +21,7 @@ Script to format your PowerShell scripts using PSScriptAnalyzer. Used as a Git p
 ./FormatCode.ps1 -CheckOnly -ShowOnlyReformat
 ```
 
-### Format Code with Custom Settings and Rules
+## Custom Settings and Rules
 
 See [PSScriptAnalyzer rules reference](https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/readme?view=ps-modules).
 
