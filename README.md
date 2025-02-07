@@ -1,6 +1,11 @@
 # PowerShell-Formatter
 Script to format your PowerShell scripts using PSScriptAnalyzer. Used as a Git pre-commit hook and in CI pipelines.
 
+## Installation
+Simply copy the `FormatCode.ps1` script to your repository.
+
+To install the required dependency (PSScriptAnalyzer) on your machine, run `./FormatCode.ps1 -InstallDependencies`.
+
 ## Usage
 
 ### Format Code
