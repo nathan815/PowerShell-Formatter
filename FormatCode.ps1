@@ -29,14 +29,13 @@ Requires PSScriptAnalyzer module. Install it with:
 param (
     $Directory = ".",
     $File = $null,
+    $SettingsFile = "$PSScriptRoot/PSScriptAnalyzerSettings.psd1",
     [switch] $ShowOnlyReformat, # Only show files that need reformatting
     [switch] $CheckOnly, # Check formatting but don't update files
     [switch] $InstallDependencies # Install required modules
 )
 
 $ErrorActionPreference = "Stop"
-
-$SettingsFile = "$PSScriptRoot/PSScriptAnalyzerSettings.psd1"
 
 $BaseDirectory = Split-Path -Parent $PSScriptRoot
 $Directory = Resolve-Path $Directory
@@ -86,7 +85,13 @@ foreach ($file in $files) {
     $success = $false
     while ($attempts -lt $maxAttempts) {
         try {
-            $formatted = Invoke-Formatter -Script $content -Settings $SettingsFile
+            $options = @{
+                Script = $content
+            }
+            if (Get-ChildItem -Path $SettingsFile -ErrorAction SilentlyContinue) {
+                $options.Settings = $SettingsFile
+            }
+            $formatted = Invoke-Formatter @options
             $success = $true
             break
         }
