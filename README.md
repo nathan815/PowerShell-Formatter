@@ -9,13 +9,13 @@ Script to format your PowerShell scripts using PSScriptAnalyzer. Used as a Git p
 ./FormatCode.ps1
 ```
 
-### Format Code (Check Only - Don't Modify Files)
+### Check Formatting (Don't Modify Files)
 
 ```powershell
 ./FormatCode.ps1 -CheckOnly
 ```
 
-### Format Code (Check Only - Show Only Files That Need Reformatting)
+### Check Formatting (Don't Modify Files and Only Show Files That Need Reformatting)
 
 ```powershell
 ./FormatCode.ps1 -CheckOnly -ShowOnlyReformat
