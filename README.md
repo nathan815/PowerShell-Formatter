@@ -23,7 +23,7 @@ Script to format your PowerShell scripts using PSScriptAnalyzer. Used as a Git p
 
 ## Custom Settings and Rules
 
-See [PSScriptAnalyzer rules reference](https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/readme?view=ps-modules).
+See [PSScriptAnalyzer rules reference](https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/readme?view=ps-modules) and the sample [PSScriptAnalyzerSettings.psd1](./PSScriptAnalyzerSettings.psd1) in this repository.
 
 Create a file called `PSScriptAnalyzerSettings.psd1` next to FormatCode.ps1.
 
